@@ -1,0 +1,10 @@
+#!fsharp
+open Microsoft.DotNet.Interactive
+open Microsoft.DotNet.Interactive.Formatting
+
+#!csharp
+
+if (KernelInvocationContext.Current is { } currentContext)
+{
+    currentContext.DisplayAs(".dib executed!", "text/markdown");
+}
